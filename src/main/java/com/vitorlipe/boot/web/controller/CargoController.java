@@ -108,7 +108,7 @@ public class CargoController {
 			
 			redirectAttributes.addFlashAttribute("sucesso", "Cargo excluido com sucesso");
 		}catch(Exception e) {
-			redirectAttributes.addAttribute("erro", e.getMessage());
+			redirectAttributes.addFlashAttribute("erro", e.getMessage());
 		}
 	 		
 		 return "redirect:/cargos/listar";
